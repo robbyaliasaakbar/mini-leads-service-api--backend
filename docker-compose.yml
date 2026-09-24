@@ -1,0 +1,12 @@
+# 1 command nyalain backend data :7005. Pola sama kayak backend :7002.
+# network_mode host (Linux): localhost di container = localhost PC,
+# jadi AUTH_API_URL=http://localhost:7002 nyambung. restart tetap auto.
+services:
+  backend:
+    build: .
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      - ./:/app
+    env_file:
+      - .env

@@ -1,0 +1,6 @@
+# Biar build cepat + image ramping.
+node_modules/
+*.db
+*.db.bak-*
+*.log
+.DS_Store
